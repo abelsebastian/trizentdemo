@@ -92,6 +92,9 @@ export const InventoryPowder: React.FC = () => {
     }
   };
 
+  const criticalCount = inventory.filter(i => i.status === 'Critical').length;
+  const nearExpiryCount = inventory.filter(i => i.status === 'Near Expiry').length;
+
   const summaryCards: SummaryCard[] = [
     { 
       label: 'AVAILABLE (GMS)', 
@@ -103,7 +106,7 @@ export const InventoryPowder: React.FC = () => {
     },
     { 
       label: 'NEAR EXPIRY', 
-      value: statistics.near_expiry.toString().padStart(2, '0'), 
+      value: nearExpiryCount.toString().padStart(2, '0'), 
       color: 'border-amber-500', 
       icon: 'schedule', 
       trend: '< 30 DAYS', 
@@ -111,7 +114,7 @@ export const InventoryPowder: React.FC = () => {
     },
     { 
       label: 'CRITICAL STOCK', 
-      value: (statistics.expired + statistics.blocked).toString().padStart(2, '0'), 
+      value: criticalCount.toString().padStart(2, '0'), 
       color: 'border-red-500', 
       icon: 'report', 
       trend: 'REPLENISH NOW', 
