@@ -19,17 +19,17 @@ export const SummaryCards: React.FC<SummaryCardsProps> = ({ cards, activeFilter,
           }`}
         >
           <div className="flex justify-between items-start">
-            <p className="text-[10px] sm:text-[11px] font-black text-slate-300 uppercase tracking-[0.2em]">{card.label}</p>
+            <p className="text-[10px] sm:text-[11px] font-black text-[#898583] uppercase tracking-[0.2em]">{card.label}</p>
             <span
               className={`material-symbols-outlined text-xl sm:text-2xl transition-colors ${
-                activeFilter === card.status ? 'text-slate-800' : 'text-slate-200 group-hover:text-slate-400'
+                activeFilter === card.status ? 'text-[#374355]' : 'text-[#D8DADD] group-hover:text-[#69727F]'
               }`}
             >
               {card.icon}
             </span>
           </div>
-          <p className="text-3xl sm:text-4xl font-black text-slate-800 mt-2">{card.value}</p>
-          <p className="text-[9px] sm:text-[10px] font-black text-slate-300 uppercase mt-3 sm:mt-4 italic tracking-[0.1em]">{card.trend}</p>
+          <p className="text-3xl sm:text-4xl font-black text-[#374355] mt-2">{card.value}</p>
+          <p className="text-[9px] sm:text-[10px] font-black text-[#898583] uppercase mt-3 sm:mt-4 italic tracking-[0.1em]">{card.trend}</p>
         </button>
       ))}
     </div>

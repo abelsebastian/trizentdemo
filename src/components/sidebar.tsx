@@ -15,24 +15,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange }) =
   return (
     <aside className="w-64 bg-white border-r border-gray-100 flex flex-col shrink-0 overflow-y-auto custom-scrollbar shadow-sm h-screen">
       <div className="px-10 py-12">
-        <h1 className="text-4xl font-black text-[#2D3E50] tracking-tighter">MPATS</h1>
+        <h1 className="text-4xl font-black text-[#36405D] tracking-tighter">MPATS</h1>
       </div>
 
       <nav className="flex-1 px-4 space-y-1">
         {/* Dashboard - Disabled */}
-        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-slate-300 cursor-not-allowed opacity-50">
-          <span className="material-symbols-outlined text-[24px] text-slate-300">dashboard</span>
+        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-[#898583] cursor-not-allowed opacity-50">
+          <span className="material-symbols-outlined text-[24px] text-[#898583]">dashboard</span>
           Dashboard
-          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-2 py-0.5 rounded">
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-2 py-0.5 rounded">
             Demo
           </span>
         </div>
 
         {/* GPT Test - Disabled */}
-        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-slate-300 cursor-not-allowed opacity-50">
-          <span className="material-symbols-outlined text-[24px] text-slate-300">science</span>
+        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-[#898583] cursor-not-allowed opacity-50">
+          <span className="material-symbols-outlined text-[24px] text-[#898583]">science</span>
           GPT Test
-          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-2 py-0.5 rounded">
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-2 py-0.5 rounded">
             Demo
           </span>
         </div>
@@ -42,13 +42,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange }) =
           <button
             onClick={() => setInventoryExpanded(!inventoryExpanded)}
             className={`w-full flex items-center justify-between px-4 py-3 text-sm transition-all rounded-xl mb-1 ${
-              currentView === 'inventory-powder' ? 'text-[#FF7043] font-bold' : 'text-slate-500 hover:bg-slate-50'
+              currentView === 'inventory-powder' ? 'text-[#FF7344] font-bold' : 'text-[#69727F] hover:bg-slate-50'
             }`}
           >
             <div className="flex items-center gap-4">
               <span
                 className={`material-symbols-outlined text-[24px] ${
-                  currentView === 'inventory-powder' ? 'text-[#FF7043]' : 'text-slate-400'
+                  currentView === 'inventory-powder' ? 'text-[#FF7344]' : 'text-[#69727F]'
                 }`}
               >
                 assignment_turned_in
@@ -65,24 +65,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange }) =
               <button
                 onClick={() => onViewChange('inventory-powder')}
                 className={`w-full text-left px-4 py-2 text-xs font-bold transition-all rounded-lg ${
-                  isActive('inventory-powder') ? 'text-[#FF7043] bg-orange-50/50' : 'text-slate-400 hover:text-slate-600 hover:bg-slate-50'
+                  isActive('inventory-powder') ? 'text-[#FF7344] bg-orange-50/50' : 'text-[#69727F] hover:text-[#374355] hover:bg-slate-50'
                 }`}
               >
                 Media Powder
               </button>
               
               {/* Solutions - Disabled */}
-              <div className="w-full text-left px-4 py-2 text-xs font-bold rounded-lg text-slate-300 cursor-not-allowed opacity-50 flex items-center justify-between">
+              <div className="w-full text-left px-4 py-2 text-xs font-bold rounded-lg text-[#898583] cursor-not-allowed opacity-50 flex items-center justify-between">
                 Solutions
-                <span className="text-[7px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-1.5 py-0.5 rounded">
+                <span className="text-[7px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-1.5 py-0.5 rounded">
                   Soon
                 </span>
               </div>
               
               {/* Containers - Disabled */}
-              <div className="w-full text-left px-4 py-2 text-xs font-bold rounded-lg text-slate-300 cursor-not-allowed opacity-50 flex items-center justify-between">
+              <div className="w-full text-left px-4 py-2 text-xs font-bold rounded-lg text-[#898583] cursor-not-allowed opacity-50 flex items-center justify-between">
                 Containers
-                <span className="text-[7px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-1.5 py-0.5 rounded">
+                <span className="text-[7px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-1.5 py-0.5 rounded">
                   Soon
                 </span>
               </div>
@@ -91,49 +91,65 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange }) =
         </div>
 
         {/* Media Prep Batch - Disabled */}
-        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-slate-300 cursor-not-allowed opacity-50">
-          <span className="material-symbols-outlined text-[24px] text-slate-300">layers</span>
+        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-[#898583] cursor-not-allowed opacity-50">
+          <span className="material-symbols-outlined text-[24px] text-[#898583]">layers</span>
           Media Prep Batch
-          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-2 py-0.5 rounded">
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-2 py-0.5 rounded">
             Demo
           </span>
         </div>
 
         {/* Post Autoclave Process - Disabled */}
-        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-slate-300 cursor-not-allowed opacity-50">
-          <span className="material-symbols-outlined text-[24px] text-slate-300">autostop</span>
+        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-[#898583] cursor-not-allowed opacity-50">
+          <span className="material-symbols-outlined text-[24px] text-[#898583]">autostop</span>
           Post Autoclave Process
-          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-2 py-0.5 rounded">
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-2 py-0.5 rounded">
             Demo
           </span>
         </div>
 
         {/* Reconciliation - Disabled */}
-        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-slate-300 cursor-not-allowed opacity-50">
-          <span className="material-symbols-outlined text-[24px] text-slate-300">balance</span>
+        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-[#898583] cursor-not-allowed opacity-50">
+          <span className="material-symbols-outlined text-[24px] text-[#898583]">balance</span>
           Reconciliation
-          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-2 py-0.5 rounded">
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-2 py-0.5 rounded">
             Demo
           </span>
         </div>
 
         {/* Reports - Disabled */}
-        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-slate-300 cursor-not-allowed opacity-50">
-          <span className="material-symbols-outlined text-[24px] text-slate-300">bar_chart</span>
+        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-[#898583] cursor-not-allowed opacity-50">
+          <span className="material-symbols-outlined text-[24px] text-[#898583]">bar_chart</span>
           Reports
-          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-2 py-0.5 rounded">
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-2 py-0.5 rounded">
             Demo
           </span>
         </div>
 
         {/* Product Master - Disabled */}
-        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-slate-300 cursor-not-allowed opacity-50">
-          <span className="material-symbols-outlined text-[24px] text-slate-300">fact_check</span>
+        <div className="w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 text-[#898583] cursor-not-allowed opacity-50">
+          <span className="material-symbols-outlined text-[24px] text-[#898583]">fact_check</span>
           Product Master
-          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-slate-400 px-2 py-0.5 rounded">
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-slate-100 text-[#69727F] px-2 py-0.5 rounded">
             Demo
           </span>
         </div>
+
+        {/* Debug - Active */}
+        <button
+          onClick={() => onViewChange('debug')}
+          className={`w-full flex items-center gap-4 px-4 py-3 text-sm rounded-xl mb-1 transition-all ${
+            currentView === 'debug' ? 'text-[#FF7344] font-bold bg-orange-50/50' : 'text-[#69727F] hover:bg-slate-50'
+          }`}
+        >
+          <span className={`material-symbols-outlined text-[24px] ${currentView === 'debug' ? 'text-[#FF7344]' : 'text-[#69727F]'}`}>
+            bug_report
+          </span>
+          API Debug
+          <span className="ml-auto text-[8px] font-black uppercase tracking-widest bg-blue-100 text-blue-600 px-2 py-0.5 rounded">
+            Dev
+          </span>
+        </button>
       </nav>
     </aside>
   );
